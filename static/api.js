@@ -5,7 +5,7 @@ export const restInit = () =>
     axios.interceptors.request.use(function (config)
     {
         //console.log(config)
-        config.headers.Authorization = `Basic //here is the token for auth`;
+        config.headers.Authorization = `Basic {auth_token comes here}`;
         return config;
     }, function (error)
     {
