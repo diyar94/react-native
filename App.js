@@ -10,14 +10,6 @@ const App = () =>
 {
     const createTicket = async (params) =>
     {
-        const payload = {
-            ticket: {
-                subject: 'From react native app',
-                description: 'Incident description',
-                type: 'Hello'
-            }
-        };
-
         // Testing GET request
         // const id = 11;
         //const {data, status} = await axios.get(`${url}${API_ENDPOINTS.TICKET}${id}.json`);
@@ -30,13 +22,13 @@ const App = () =>
                     'Content-Type': 'application/x-www-form-urlencoded',
                     'Accept': 'application/json'
                 },
+
                 ticket: {
                     subject: 'From react native app',
                     description: 'Incident description',
                     type: 'incident',
                     priority: 'high',
                     due_at: '2020-08-10'
-
                 }
             }
         );
